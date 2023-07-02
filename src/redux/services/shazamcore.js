@@ -1,3 +1,5 @@
+//Here Shazam Music API is Used not ShazamCore API
+
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import axios from 'axios';
 import {selectCategory} from '../features/playerSlice';
@@ -7,7 +9,7 @@ export const shazamCoreApi = createApi({
     baseQuery : fetchBaseQuery({
         baseUrl:'https://shazam-api7.p.rapidapi.com',
      prepareHeaders: (headers) =>{
-        headers.set('X-RapidAPI-Key','28c423b064msh8e870c067afc75bp1ce93djsn494fec91964b');
+        headers.set('X-RapidAPI-Key','Use Your API key here');
         return headers;
      } ,  
     }),
