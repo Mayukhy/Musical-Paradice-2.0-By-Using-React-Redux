@@ -16,10 +16,10 @@ const Track = ({ isPlaying, isActive, activeSong,clicktrack }) =>{
         }} src={activeSong?.images?.coverart || activeSong?.images?.default || FinalUrl || 'https://us.123rf.com/450wm/petrnutil/petrnutil1701/petrnutil170100208/70666201-top-ten-button-vector-blue.jpg?ver=6'} alt="cover art" className="rounded-full" />
       </div>
       <div className=" ">
-        <p className="truncate text-white font-bold text-lg xl:w-[60%] md:w-[40%] w-28">
+        <p className="truncate text-white font-bold text-lg xl:w-[300px] md:w-[200px] w-28">
           { activeSong?.title || activeSong?.heading?.title || activeSong?.attributes?.name }
         </p>
-        <p className="truncate text-gray-300 xl:w-[60%] md:w-[40%] w-28">
+        <p className="truncate text-gray-300 xl:w-[300px] md:w-[200px] w-28">
           { activeSong?.subtitle || activeSong?.heading?.subtitle || activeSong?.attributes?.composerName}
         </p>
       </div>
