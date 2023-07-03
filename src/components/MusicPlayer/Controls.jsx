@@ -4,8 +4,8 @@ import { BsArrowRepeat, BsFillPauseFill, BsFillPlayFill, BsShuffle } from 'react
 import { Box, IconButton } from '@mui/material';
 const Controls = ({ isPlaying, repeat, setRepeat, shuffle, setShuffle, currentSongs, handlePlayPause, handlePrevSong, handleNextSong }) => (
   <Box sx={{marginLeft:{xs:'-40px',sm:0,md:0}}} className="flex items-center justify-around md:w-36 lg:w-52 2xl:w-80">
-   < IconButton sx={{color:'whitesmoke'}}>
-    <BsArrowRepeat size={20} color={repeat ? 'red' : 'white'} onClick={() => setRepeat(!repeat)} className="hidden sm:block cursor-pointer" />
+   < IconButton className=' animate-[spin_2s]' sx={{color:'whitesmoke'}}>
+    <BsArrowRepeat  size={20} color={repeat ? '#d76df7' : 'white'} onClick={() => setRepeat(!repeat)} className="hidden sm:block cursor-pointer" />
     </IconButton>
     {currentSongs?.length && < IconButton sx={{color:'whitesmoke'}}> <MdSkipPrevious size={30} color="#FFF" className="cursor-pointer" onClick={handlePrevSong} /> </IconButton>}
     {isPlaying ? (
@@ -18,7 +18,7 @@ const Controls = ({ isPlaying, repeat, setRepeat, shuffle, setShuffle, currentSo
       </IconButton>
     )}
     {currentSongs?.length && < IconButton sx={{color:'whitesmoke'}}> <MdSkipNext size={30} color="#FFF" className="cursor-pointer" onClick={handleNextSong} /> </IconButton>}
-    < IconButton sx={{color:'whitesmoke'}}><BsShuffle size={20} color={shuffle ? 'red' : 'white'} onClick={() => setShuffle((prev) => !prev)} className="hidden sm:block cursor-pointer" /> </IconButton>
+    < IconButton className=' animate-[spin_2s]' sx={{color:'whitesmoke'}}><BsShuffle size={20} color={shuffle ? '#d76df7' : 'white'} onClick={() => setShuffle((prev) => !prev)} className="hidden sm:block cursor-pointer" /> </IconButton>
   </Box>
 );
 

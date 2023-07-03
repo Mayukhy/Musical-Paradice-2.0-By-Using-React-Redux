@@ -60,10 +60,10 @@ export default function ArtistSongCard({song,idx,activeSong,isPlaying,data,artis
           </p>
         </CardContent>
         <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-         { showplay? <IconButton className=' animate-slideup' sx={{
+         { showplay? <IconButton className=' animate-[slideup_0.4s]' sx={{
             color:'azure', position:'absolute',left:'80%', top:'50%'
           }} aria-label="play/pause">
-          {isPlaying &&  activeSong?.attributes?.name===song?.attributes?.name   ? <PauseCircleIcon sx={{height: 48 , width: 48}}  onClick={pausesong} />:<PlayCircleFilledWhiteIcon sx={{height: 48 , width: 48}}  onClick={playsong}/>}
+          {isPlaying &&  activeSong?.attributes?.name===song?.attributes?.name   ? <PauseCircleIcon sx={{height: 58 , width: 58}}  onClick={pausesong} />:<PlayCircleFilledWhiteIcon sx={{height: 58 , width: 58}}  onClick={playsong}/>}
           </IconButton> :''}
         </Box>
       </Box>

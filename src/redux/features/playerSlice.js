@@ -10,7 +10,9 @@ const initialState = {
   category:'',
   categoryArtist:'',
   searchquary:'',
-  clicktrack:false
+  clicktrack:false,
+  getArtistsong:'',
+  getbengaliArtistsong:''
 };
 
 const playerSlice = createSlice({
@@ -81,9 +83,15 @@ const playerSlice = createSlice({
     setClicktrack:(state, action) => {
       state.clicktrack = action.payload;
     },
+    setgetArtistsong : (state,action)=>{
+      state.getArtistsong = action.payload
+    },
+    setgetBengaliArtistsong : (state,action)=>{
+      state. getbengaliArtistsong = action.payload
+    }
   },
 });
 
-export const { setActiveSong, nextSong, prevSong, playPause, selectGenreListId ,selectCategory,setSearchquary,setClicktrack,selectCategoryArtist} = playerSlice.actions;
+export const { setActiveSong, nextSong, prevSong, playPause, selectGenreListId ,selectCategory,setSearchquary,setClicktrack,selectCategoryArtist,setgetArtistsong, setgetBengaliArtistsong} = playerSlice.actions;
 
 export default playerSlice.reducer;

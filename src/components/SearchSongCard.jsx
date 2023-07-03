@@ -55,7 +55,7 @@ const SearchSongCard = ({song,idx,data,currentSongs, currentIndex}) =>{
           position:'absolute',
           top:'38%',
           transform:'scale(3)'
-        }} className={play}>{isPlaying && activeSong?.heading?.subtitle===song?.heading?.subtitle ? <PauseCircleIcon  onClick={pausesong} />:<PlayCircleFilledWhiteIcon onClick={playsong}/>}
+        }} className={play}>{isPlaying && activeSong?.heading?.subtitle===song?.heading?.subtitle ? <PauseCircleIcon className=' animate-[slidedown_0.3s]'  onClick={pausesong} />:<PlayCircleFilledWhiteIcon className=' animate-[slideup_0.3s]' onClick={playsong}/>}
        </Box>
 
        

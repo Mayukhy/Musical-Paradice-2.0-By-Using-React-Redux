@@ -17,6 +17,9 @@ export default function Discover () {
     const songs = data?.tracks?.hits?.map((song)=>song);
     if (isFetching) 
     return <Loader/>;
+    if (error) {
+     return <Error/>
+    }
 
 return (
 <div className="flex flex-col">
@@ -45,8 +48,8 @@ return (
           modules={[FreeMode]}
           className='mt-4'>
             {songs?.map((song,idx)=>(
-              <SwiperSlide key={song?.key} style={{width:'25%', height:'auto'}}
-              className='animate-slideleft flex flex-col'
+              <SwiperSlide key={song?.key} style={{width:'25%', height:'auto',transition:'all 0.3s'}}
+              className=' hover:bg-slate-700 md:hover:p-4 hover:rounded-md animate-slideleft flex flex-col'
               ><Link to={`/artists/${ song?.artists? song?.artists[0]?.adamid : ''}`}>
                 <img src={song?.share?.avatar ||'https://t3.ftcdn.net/jpg/01/09/00/64/360_F_109006426_388PagqielgjFTAMgW59jRaDmPJvSBUL.jpg'} className='rounded-full object-cover w-full' alt="" />
               </Link>

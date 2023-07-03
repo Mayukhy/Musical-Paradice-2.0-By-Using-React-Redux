@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography'
 import { useGetTopChartsQuery} from "../redux/services/shazamcore";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCategory} from "../redux/features/playerSlice";
+import Songscarousel from "../components/Songscarousel";
 export default function Discover () {
   const dispatch = useDispatch();
   const {activeSong,isPlaying,category} = useSelector((state)=>state.player);
@@ -26,6 +27,7 @@ export default function Discover () {
     
 
 return (
+  <>
 <div className="flex flex-col">
 <div className="w-full flex justify-between  items-center sm:flex-row flex-col mx-1 my-2">
 <h1 className=" text-white font-bold text-4xl">Discover {selectname}</h1>
@@ -66,8 +68,8 @@ setSelectname(item.title)
     )
   })}
 </div>
-
 </div>
+</>
 )
 }
 

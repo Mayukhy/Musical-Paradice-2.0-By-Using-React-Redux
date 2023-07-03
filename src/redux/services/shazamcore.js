@@ -9,7 +9,7 @@ export const shazamCoreApi = createApi({
     baseQuery : fetchBaseQuery({
         baseUrl:'https://shazam-api7.p.rapidapi.com',
      prepareHeaders: (headers) =>{
-        headers.set('X-RapidAPI-Key','Use Your API key here');
+        headers.set('X-RapidAPI-Key','33d0e9ff7emshdfc6a8600eb2c8cp161467jsn7f54013e663c');
         return headers;
      } ,  
     }),
@@ -23,8 +23,8 @@ export const shazamCoreApi = createApi({
       getArtistDetail: builder.query({query: (id)=>`/artist/get-top-songs?id=${id}`}) ,
       getArtistDetailSong: builder.query({query: (id)=>`/artist/get-details?id=${id}`}) ,
       getSongshollywood: builder.query({query: ()=>`/search?term=Hollywood`}) ,
-      getTopIndiaCharts: builder.query({query: ()=>'/charts/get-top-songs-in-city?country_code=IN&city_name=Delhi'}) , 
-      getTopKolkataCharts: builder.query({query: ()=>'/charts/get-top-songs-in-city?country_code=IN&city_name=Kolkata'}) , 
+      getSongsFromArtist: builder.query({query: (artistName)=>`/search?term=${artistName}`}) ,
+      getSongsFromBengaliArtist: builder.query({query: (bengaliartistName)=>`/search?term=${bengaliartistName}`}) ,    
    }),
     
 });
@@ -39,10 +39,7 @@ export const {
    useGetArtistDetailQuery,
    useGetArtistDetailSongQuery,
    useGetSongshollywoodQuery,
-   useGetTopIndiaChartsQuery,
-   useGetTopKolkataChartsQuery
+   useGetSongsFromArtistQuery,
+   useGetSongsFromBengaliArtistQuery
 }=shazamCoreApi;
-// songs/list-recommendations?id=293401556'
-//artist/get-top-songs?id=
-//get-details?id=
-//charts/get-top-songs-in-country?country_code=IN
+

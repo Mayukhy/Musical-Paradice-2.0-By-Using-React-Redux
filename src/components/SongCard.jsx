@@ -55,7 +55,7 @@ const SongCard = ({song,idx,data,currentSongs, currentIndex}) =>{
           position:'absolute',
           top:'38%',
           transform:'scale(3)'
-        }} className={play}>{isPlaying && activeSong?.title===song?.title ? <PauseCircleIcon  onClick={pausesong} />:<PlayCircleFilledWhiteIcon onClick={playsong}/>}
+        }} className={play}>{isPlaying && activeSong?.title===song?.title ? <PauseCircleIcon className=' animate-[slidedown_0.3s]'  onClick={pausesong} />:<PlayCircleFilledWhiteIcon className='animate-[slideup_0.3s]' onClick={playsong}/>}
        </Box>
 
        

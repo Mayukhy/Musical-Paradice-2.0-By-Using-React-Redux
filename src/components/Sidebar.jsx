@@ -15,8 +15,8 @@ const Sidebar = () => {
     <img  src={Logo} style={{ transition:'all 0.3s'}}  className=" hover:scale-105 cursor-pointer object-contain w-full h-48 mt-5  opacity-80" alt="" />
     <div className="mt-0">
       {links?.map((items,id)=>(
-          <NavLink key={id} className=' hover:translate-x-1 flex flex-row justify-center my-8 font-mono text-lg text-gray-400 hover:text-cyan-500 transition-all' to={items.to}>
-         {items.icon} {items.name}
+          <NavLink key={id} className=' hover:translate-x-1 flex font-bold flex-row justify-center my-8 font-mono text-lg text-gray-300 hover:text-cyan-500 transition-all' to={items.to}>
+         <img width='40px' className=" mb-4 mt-[-10px] mr-4" src={items?.icon} alt="" /> {items.name}
           </NavLink>
         
       ))}
@@ -41,9 +41,12 @@ const Sidebar = () => {
     <img src={Logo}  className=" object-contain w-full h-40 hover:scale-110" alt="" />
     <div className="mt-5">
       {links.map((items,id)=>(
-          <NavLink className='flex flex-row justify-center my-8  font-medium text-gray-400 hover:text-cyan-500 transition-all' to={items.to}>
-         {items?.icon} {items.name}
+        <>
+       
+          <NavLink className=' hover:translate-x-1 flex font-bold flex-row justify-center my-8 font-mono text-lg text-gray-300 hover:text-cyan-500 transition-all' to={items.to}>
+          <img width='40px' className=" mb-4 mt-[-10px] mr-4" src={items?.icon} alt="" />    {items.name}
           </NavLink>
+          </>
         
       ))}
     </div>

@@ -56,7 +56,7 @@ export default function TopChartCard({song,idx,activeSong,isPlaying,data}) {
           </p>
         </CardContent>
         <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-         { showplay? <IconButton className=' animate-slideup' sx={{
+         { showplay? <IconButton className=' animate-[slideup_0.4s]' sx={{
             color:'azure', position:'absolute',left:'80%', top:'50%'
           }} aria-label="play/pause">
           {isPlaying &&  activeSong?.title===song?.title  ? <PauseCircleIcon sx={{height: 48 , width: 48}}  onClick={pausesong} />:<PlayCircleFilledWhiteIcon sx={{height: 48 , width: 48}}  onClick={playsong}/>}

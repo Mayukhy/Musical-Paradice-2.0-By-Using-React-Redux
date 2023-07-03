@@ -26,7 +26,14 @@
 }
 /* Active Navigation Link */
 .active {
- color: aqua
+ color: aqua;
+ border: solid 1px rgba(232, 250, 250, 0.598);
+ width: 200px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 10px;
+ transition: all 0.4s;
 }
 
 

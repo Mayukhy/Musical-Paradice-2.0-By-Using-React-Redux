@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { genres } from '../assets/constants';
 import { selectCategoryArtist } from '../redux/features/playerSlice';
 import ArtistLoader from '../components/ArtistLoader';
+import IconButton from '@mui/material/IconButton'
 export default function TopArtists() {
     const dispatch = useDispatch()
     const {data :Hollywood,isFetching:hollywoodFetching} = useGetSongshollywoodQuery()
@@ -72,17 +73,18 @@ setSelectname(item.title)
   modules={[FreeMode]}
   className='mt-4 mb-10'>
     {All?.tracks?.map((song,idx)=>(
-      <SwiperSlide key={song?.key} style={{width:'25%', height:'auto'}}
-      className='animate-slideleft flex flex-col'
+             <SwiperSlide key={song?.key} style={{width:'25%', height:'auto',transition:'all 0.3s'}}
+      className=' hover:bg-slate-700 md:hover:p-4 hover:rounded-md animate-slideleft flex flex-col'
       >
         <Link to={`/artists/${song?.artists[0]?.adamid}`}>
         <img src={song?.share?.avatar ||'https://t3.ftcdn.net/jpg/01/09/00/64/360_F_109006426_388PagqielgjFTAMgW59jRaDmPJvSBUL.jpg'} className='rounded-full object-cover w-full' alt="" />
           <p className=' text-gray-400 w-20 truncate text-md text-center m-auto'>{song?.subtitle}</p>
         </Link>
-      </SwiperSlide>
+      </SwiperSlide> 
+
     ))}
   </Swiper>
-    <div className="flex flex-row justify-between items-center">
+    <div className="flex flex-row justify-between  items-center">
 <h1 className=" text-white font-bold text-2xl">Best of HollyWood</h1>
 <Link to='/Top Charts'>
 <p className=" text-gray-400 text-xl">See More</p></Link>
@@ -96,8 +98,8 @@ setSelectname(item.title)
   modules={[FreeMode]}
   className='mt-4'>
     {Hollywood?.tracks?.hits?.map((song,idx)=>(
-      <SwiperSlide key={song?.key} style={{width:'25%', height:'auto'}}
-      className='animate-slideleft flex flex-col'
+      <SwiperSlide key={song?.key} style={{width:'25%', height:'auto',transition:'all 0.3s'}}
+      className=' hover:bg-slate-700 md:hover:p-4 hover:rounded-md animate-slideleft flex flex-col'
       >
         <Link to={`/artists/${song?.artists[0]?.adamid}`}>
         <img src={song?.share?.avatar ||'https://t3.ftcdn.net/jpg/01/09/00/64/360_F_109006426_388PagqielgjFTAMgW59jRaDmPJvSBUL.jpg'} className='rounded-full object-cover w-full' alt="" />
