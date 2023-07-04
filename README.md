@@ -3,4 +3,6 @@ Here Shazam API is used to fetch songs, Artists and Search Results
 
 API link : https://rapidapi.com/yourdevmail/api/shazam-api7
 
+APP Link : https://musicalparadice.netlify.app/
+
 
