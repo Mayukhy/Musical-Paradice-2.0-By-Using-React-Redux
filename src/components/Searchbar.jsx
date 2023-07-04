@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 export default function Searchbar() {
   const navigate = useNavigate()
-  const {searchquary} = useSelector((state)=>state.player);
+ 
   const [searchTerm,setsearhTerm] = useState('')
   const handelsubmit=(e)=>{
     if (e.key === 'Enter') {

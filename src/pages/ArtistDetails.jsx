@@ -18,8 +18,8 @@ export default function ArtistDetails() {
 </div>
 
 <div className=' mt-4'>
-        <p className=' text-white font-bold text-2xl  ml-5'>Songs From The Artist</p>
-        <div className='flex flex-wrap sm:justify-center mt-10 gap-8 scroll-smooth'>
+        <p className=' text-orange-100 font-bold text-2xl  ml-5'>Songs From The Artist</p>
+        <div className='flex flex-wrap sm:justify-center mt-7 gap-8 scroll-smooth'>
         {ArtistDetail?.data?.map((song,idx)=>{
           return(
 <ArtistSongCard key={idx} artistId={id} activeSong={activeSong} idx={idx} data={ArtistDetail?.data} isPlaying={isPlaying} song={song}/>

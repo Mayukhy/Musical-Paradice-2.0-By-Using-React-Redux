@@ -67,7 +67,7 @@ export const genres = [
  ];
 
 export const links = [
-  { name: 'Discover', to: '/', icon:`${discover}` },
+  { name: 'Discover', to: '/discover', icon:`${discover}` },
   { name: 'Top Artists', to: '/top-artists', icon:`${singer}` },
   { name: 'Top Charts', to: '/top-charts', icon:`${song}`},
 ];

@@ -6,7 +6,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px !important;
 }
 
 /* Track */
@@ -16,13 +16,16 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #50697f;
+  background: #ebf3f412;
   border-radius: 15px;
+  transition: all 0.3s !important;
+  width: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #593c6bb5;
+  background: #e4e3e4ec;
+  opacity: 1;
 }
 /* Active Navigation Link */
 .active {

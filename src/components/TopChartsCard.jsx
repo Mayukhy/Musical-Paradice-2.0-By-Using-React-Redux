@@ -39,10 +39,10 @@ export default function TopChartsCard({song,idx,activeSong,isPlaying,data,isfetc
       setshowplay(true)
     }} onMouseLeave={()=>{
       setshowplay(false)
-    }} style={{transition:'all 0.3s',position:'relative' , background: activeSong?.heading?.title===song?.heading?.title?'#1e0140':'linear-gradient(90deg, rgba(8,129,182,0.6811974789915967) 0%, rgba(60,3,110,0.7344187675070029) 100%)'}} className=' rounded-xl flex-col  p-6 hover:border  border-red-100 hover:bg-blue-900 hover:scale-110   duration-300 backdrop-blur-md border-red-200' sx={{ display: 'flex' ,width:{xs:'200px',md:'200px',lg:'280px'},height:{xs:'260px',md:'260px',lg:'310px'},justifyContent:'space-between',margin:'15px 15px',cursor:'pointer',borderRadius:'20px',boxShadow:'none',background:'transparent' }}>
+    }} style={{transition:'all 0.3s',position:'relative' , background: activeSong?.heading?.title===song?.heading?.title?'#1e0140':'linear-gradient(90deg, rgba(8,129,182,0.6811974789915967) 0%, rgba(60,3,110,0.7344187675070029) 100%)'}} className=' rounded-xl flex-col  p-3 hover:border border-red-100 hover:bg-blue-900 hover:scale-110   duration-300 backdrop-blur-md border-red-200 hover:opacity-70' sx={{ display: 'flex' ,width:{xs:'200px',md:'200px',lg:'260px'},height:{xs:'260px',md:'260px',lg:'310px'},justifyContent:'space-between',margin:'10px 10px',cursor:'pointer',borderRadius:'20px',boxShadow:'none',background:'transparent' }}>
     <CardMedia
         component="img"
-        sx={{ width:{xs: 200,md:200,lg:250}, height: {xs:170,md:170,lg:200},opacity:0.9, borderRadius:'10px', margin:'auto'}}
+        sx={{ width:{xs: 200,md:200,lg:250}, height: {xs:170,md:170,lg:210},opacity:0.9, borderRadius:'15px', margin:'auto'}}
         image={ song?.images?.default|| stockWorldchats[idx]?.image}
       />
       

@@ -31,7 +31,7 @@ const App = () => {
         <div className="px-6 mt-1  overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
           <div className="flex-1 h-fit pb-40">
             <Routes>
-              <Route path="/" element={<Discover />} />
+              <Route  path="/discover" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
               <Route path="/top-charts" element={<TopCharts />} />
               <Route path="/artists/:id" element={<ArtistDetails />} />
@@ -82,9 +82,10 @@ const App = () => {
 <h1 className=' font-light font-mono animate-slideright text-teal-300  text-4xl text-center p-5 mt-8 mb-10 shadow-slate-400 '> Listen, <span className=' text-lime-200'>Discover Songs</span> <span className=' text-cyan-400'>&</span> <span className=' text-fuchsia-300'>Discover People</span></h1>
   <div onClick={()=>{
     setslidup(true)
-  }} style={{transition:'all 0.3s', borderRadius:'50%', background:'linear-gradient(90deg, rgba(7,185,199,0.6195728291316527) 0%, rgba(134,4,185,0.6195728291316527) 100%)'}} className=' p-8 animate-bounce mt-1  text-yellow-50 font-bold text-2xl hover:scale-125 cursor-pointer shadow-2xl shadow-cyan-200'> 
+  }} style={{transition:'all 0.3s', borderRadius:'50%', background:'linear-gradient(90deg, rgba(7,185,199,0.6195728291316527) 0%, rgba(134,4,185,0.6195728291316527) 100%)'}} className=' pt-8 pr-9 pl-9 pb-8 animate-bounce mt-1  text-yellow-50 font-bold text-2xl hover:scale-125 cursor-pointer shadow-2xl shadow-cyan-200'> 
  <IconButton className=''  aria-label="">
- <ArrowCircleDownIcon style={{ transform:'scale(4)'}} className=' text-slate-300'/> 
+  <Link to='/discover'><ArrowCircleDownIcon style={{ transform:'scale(4)'}} className=' text-slate-300 mb-1'/> </Link>
+ 
  </IconButton>
  
  

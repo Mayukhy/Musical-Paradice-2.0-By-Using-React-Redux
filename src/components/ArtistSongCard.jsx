@@ -40,7 +40,7 @@ export default function ArtistSongCard({song,idx,activeSong,isPlaying,data,artis
       setshowplay(true)
     }} onMouseLeave={()=>{
       setshowplay(false)
-    }} style={{transition:'all 0.3s',position:'relative' , border:activeSong?.attributes?.name===song?.attributes?.name?'1px solid whitesmoke': 'none', background: activeSong?.attributes?.name===song?.attributes?.name?'#1e0140':'linear-gradient(123deg, rgba(76,180,213,1) 0%, rgba(59,17,150,1) 100%)'}} className=' rounded-xl  p-6 hover:border  border-red-100 hover:bg-blue-900 hover:scale-110   duration-300 backdrop-blur-md border-red-200' sx={{ display: 'flex' ,width:{xs:'400px',sm:'500px',md:'600px',justifyContent:'space-between',margin:'2px auto',cursor:'pointer',borderRadius:'20px',boxShadow:'none',background:'transparent'} }}>
+    }} style={{transition:'all 0.3s',position:'relative' , border:activeSong?.attributes?.name===song?.attributes?.name?'1px solid whitesmoke': 'none',backgroundImage:`url(${FinalUrl})` ,backgroundSize:'cover',objectFit:'cover'}} className=' rounded-xl  p-6 hover:border  border-red-100 hover:opacity-60 hover:scale-110   duration-300 backdrop-blur-md border-red-200' sx={{ display: 'flex' ,width:{xs:'400px',sm:'500px',md:'600px',justifyContent:'space-between',margin:'2px auto',cursor:'pointer',borderRadius:'20px',boxShadow:'none',background:'transparent'} }}>
     <Typography variant='h4' sx={{margin:'30px 30px auto 0px', fontWeight:'700', color:activeSong?.attributes?.name===song?.attributes?.name?'whitesmoke': '#fcfcfc' }} className=" font-bold text-3xl ">{idx+1}.</Typography> 
     <CardMedia
         component="img"
@@ -48,10 +48,11 @@ export default function ArtistSongCard({song,idx,activeSong,isPlaying,data,artis
         image={FinalUrl}
         alt="Live from space album cover"
       />
+      <div style={{ zIndex:-9 ,top:0,left:0, background: activeSong?.attributes?.name===song?.attributes?.name?'#1e0140':'linear-gradient(90deg, rgba(3,161,173,0.8576680672268908) 0%, rgba(134,4,185,0.8520658263305322) 100%)'}} className=' absolute w-[100%] h-[100%] object-cover backdrop-blur-sm' alt="" ></div>
       
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' , marginRight:{md:'100px',sx:'0px'} }}>
-          <p className="truncate text-red-300 font-bold md:text-2xl text-xl w-44">
+          <p className="truncate text-orange-300 font-bold md:text-2xl text-xl w-44">
            {song?.attributes?.name} 
           </p>
           <p className="truncate text-gray-300 md:text-xl  text-lg w-32">
