@@ -36,3 +36,8 @@ Screenshots
 
 ![Editing YoutubeClone-MyTube-_README md at main · Mayukhy_YoutubeClone-MyTube- · GitHub - Google Chrome 7_4_2023 4_42_17 PM](https://github.com/Mayukhy/Musical-Paradice-2.0-By-Using-React-Redux/assets/107027766/99a063c3-5254-4918-8ab9-52347659c7bd)
 
+
+![Editing YoutubeClone-MyTube-_README md at main · Mayukhy_YoutubeClone-MyTube- · GitHub - Google Chrome 7_4_2023 4_42_21 PM](https://github.com/Mayukhy/Musical-Paradice-2.0-By-Using-React-Redux/assets/107027766/37b54715-6b9c-4203-8f90-8069b37a8e1c)
+
+
+![Musical Paradice 2 0 - Google Chrome 7_4_2023 1_01_38 AM](https://github.com/Mayukhy/Musical-Paradice-2.0-By-Using-React-Redux/assets/107027766/72666ad5-959c-456e-a947-fb44ea324784)
