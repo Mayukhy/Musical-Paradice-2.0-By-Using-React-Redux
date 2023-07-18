@@ -1,11 +1,13 @@
-Musical Paradice 2.0 is a fully functional Music Application.
+# Musical Paradice 2.0 is a fully functional Music Application.
 Here Shazam API is used to fetch songs, Artists and Search Results
 
-API link : https://rapidapi.com/yourdevmail/api/shazam-api7
+# API link :
+https://rapidapi.com/yourdevmail/api/shazam-api7
 
-APP Link : https://musicalparadice.netlify.app/
+# APP Link :
+https://musicalparadice.netlify.app/
 
-Screenshots
+# Screenshots
 
 
 ![Editing YoutubeClone-MyTube-_README md at main · Mayukhy_YoutubeClone-MyTube- · GitHub - Google Chrome 7_4_2023 4_40_06 PM](https://github.com/Mayukhy/Musical-Paradice-2.0-By-Using-React-Redux/assets/107027766/d01110ee-69a3-4d70-b01f-ea32673045bf)
